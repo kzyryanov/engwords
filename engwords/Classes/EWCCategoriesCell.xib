@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="1Bz-69-f3p" customClass="EWCCategoriesCell">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Bz-69-f3p" id="4ur-Ox-70u">
+                <rect key="frame" x="0.0" y="0.0" width="768" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4J-4d-ZHM">
+                        <rect key="frame" x="0.0" y="2" width="768" height="85"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{Title}" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9g-1F-bal" customClass="EWCGnuolaneLabel">
+                                <rect key="frame" x="191" y="0.0" width="557" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checked_cell.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sdj-c7-M6C">
+                                <rect key="frame" x="118" y="13" width="53" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="amv-3m-uEQ"/>
+                                    <constraint firstAttribute="height" constant="59" id="rcd-RM-evh"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Sdj-c7-M6C" firstAttribute="leading" secondItem="U4J-4d-ZHM" secondAttribute="leading" constant="118" id="82k-j9-kDc"/>
+                            <constraint firstAttribute="centerY" secondItem="Sdj-c7-M6C" secondAttribute="centerY" id="8xv-61-qsv"/>
+                            <constraint firstAttribute="bottom" secondItem="d9g-1F-bal" secondAttribute="bottom" id="DqV-Lh-ikm"/>
+                            <constraint firstAttribute="trailing" secondItem="d9g-1F-bal" secondAttribute="trailing" constant="20" id="Oxc-ND-96i"/>
+                            <constraint firstItem="d9g-1F-bal" firstAttribute="top" secondItem="U4J-4d-ZHM" secondAttribute="top" id="XJP-j7-dne"/>
+                            <constraint firstItem="d9g-1F-bal" firstAttribute="leading" secondItem="Sdj-c7-M6C" secondAttribute="trailing" constant="20" id="loj-9g-Uag"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="U4J-4d-ZHM" secondAttribute="bottom" constant="2" id="Zr0-oa-K1I"/>
+                    <constraint firstAttribute="trailing" secondItem="U4J-4d-ZHM" secondAttribute="trailing" id="gii-As-xT4"/>
+                    <constraint firstItem="U4J-4d-ZHM" firstAttribute="leading" secondItem="4ur-Ox-70u" secondAttribute="leading" id="wvF-dn-9N2"/>
+                    <constraint firstItem="U4J-4d-ZHM" firstAttribute="top" secondItem="4ur-Ox-70u" secondAttribute="top" constant="2" id="zcz-eo-bMC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="checkedView" destination="Sdj-c7-M6C" id="Xsj-oV-qGo"/>
+                <outlet property="titleLabel" destination="d9g-1F-bal" id="SE2-yY-5DT"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checked_cell.png" width="53" height="59"/>
+    </resources>
+</document>

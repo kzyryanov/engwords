@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="78" id="bOb-mv-DwQ" customClass="EWCWordsListCell">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bOb-mv-DwQ" id="Aqg-Ru-Opq">
+                <rect key="frame" x="0.0" y="0.0" width="768" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{Title}" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jd0-b3-D4e" customClass="EWCGnuolaneLabel">
+                        <rect key="frame" x="81" y="13" width="446" height="63"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="446" id="SaW-CJ-p1v"/>
+                            <constraint firstAttribute="height" constant="63" id="ys4-TE-M9B"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checked_cell.png" translatesAutoresizingMaskIntoConstraints="NO" id="hOj-Dn-H1t">
+                        <rect key="frame" x="20" y="15" width="53" height="59"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="59" id="Jqt-tF-J7a"/>
+                            <constraint firstAttribute="width" constant="53" id="wzE-Or-DbT"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{Categories}" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="JIg-IA-b7T" customClass="EWCGnuolaneLabel">
+                        <rect key="frame" x="579" y="13" width="169" height="63"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="169" id="Ktr-GE-FtM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="JIg-IA-b7T" firstAttribute="centerY" secondItem="jd0-b3-D4e" secondAttribute="centerY" id="2ky-Qe-T0p"/>
+                    <constraint firstItem="hOj-Dn-H1t" firstAttribute="centerX" secondItem="jd0-b3-D4e" secondAttribute="centerX" constant="-257.5" id="Q1H-L1-0rn"/>
+                    <constraint firstAttribute="trailing" secondItem="JIg-IA-b7T" secondAttribute="trailing" constant="20" symbolic="YES" id="Wss-Dc-qsL"/>
+                    <constraint firstItem="jd0-b3-D4e" firstAttribute="height" secondItem="JIg-IA-b7T" secondAttribute="height" id="bjQ-vv-Lii"/>
+                    <constraint firstItem="hOj-Dn-H1t" firstAttribute="top" secondItem="Aqg-Ru-Opq" secondAttribute="top" constant="15" id="cSM-OA-zQS"/>
+                    <constraint firstItem="hOj-Dn-H1t" firstAttribute="leading" secondItem="Aqg-Ru-Opq" secondAttribute="leading" constant="20" id="eAN-If-HHe"/>
+                    <constraint firstItem="hOj-Dn-H1t" firstAttribute="centerY" secondItem="jd0-b3-D4e" secondAttribute="centerY" id="kNU-E8-g25"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="checkedView" destination="hOj-Dn-H1t" id="KpM-ms-tfm"/>
+                <outlet property="childrenCountCell" destination="JIg-IA-b7T" id="9LO-Cq-sec"/>
+                <outlet property="titleLabel" destination="jd0-b3-D4e" id="wTa-Yr-Ox2"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checked_cell.png" width="53" height="59"/>
+    </resources>
+</document>

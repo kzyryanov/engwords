@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="EWCCategory" representedClassName="EWCCategory" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="dictionary" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EWCDictionary" inverseName="categories" inverseEntity="EWCDictionary" syncable="YES"/>
+        <relationship name="words" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EWCWord" inverseName="category" inverseEntity="EWCWord" syncable="YES"/>
+        <userInfo>
+            <entry key="relatedByAttribute" value="name"/>
+        </userInfo>
+    </entity>
+    <entity name="EWCDictionary" representedClassName="EWCDictionary" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EWCCategory" inverseName="dictionary" inverseEntity="EWCCategory" syncable="YES"/>
+        <userInfo>
+            <entry key="relatedByAttribute" value="name"/>
+        </userInfo>
+    </entity>
+    <entity name="EWCWord" representedClassName="EWCWord" syncable="YES">
+        <attribute name="dictationTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="images" optional="YES" attributeType="Transformable" syncable="YES">
+            <userInfo>
+                <entry key="attributeValueClassName" value="NSArray"/>
+            </userInfo>
+        </attribute>
+        <attribute name="learnTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="sound" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stage" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="stageDictation" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="stageLearn" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="stageTest" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="stageWrite" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="testTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="writeTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EWCCategory" inverseName="words" inverseEntity="EWCCategory" syncable="YES"/>
+        <userInfo>
+            <entry key="relatedByAttribute" value="name"/>
+        </userInfo>
+    </entity>
+    <elements>
+        <element name="EWCCategory" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="EWCDictionary" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="EWCWord" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>
